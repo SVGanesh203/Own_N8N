@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HubMind — LLM Orchestration Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              base: "#14171C",
+              panel: "#1B2028",
+              panel2: "#20262F",
+              line: "#2A3138",
+              ink: "#E8EAED",
+              mute: "#8B93A3",
+              flow: "#5B8DEF",
+              live: "#4CAF7D",
+              warn: "#E8A23D",
+              fail: "#E4626F",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body { background: #14171C; }
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-thumb { background: #2A3138; border-radius: 4px; }
+      @keyframes pulse-dot { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+      .pulse { animation: pulse-dot 1.6s ease-in-out infinite; }
+      @keyframes flow-dash { to { stroke-dashoffset: -24; } }
+      .flow-line { stroke-dasharray: 4 6; animation: flow-dash 1.2s linear infinite; }
+    </style>
+  </head>
+  <body class="font-body text-ink">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
